@@ -7,8 +7,6 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const express = require('express');
 
-const swagger = require('./swagger/config');
-
 const basePath = (process.env.NODE_ENV !== 'test') ? process.env.NODE_BASEPATH : '';
 
 
@@ -46,18 +44,12 @@ app.use((req, res, next) => {
 });
 
 // Models
-require('./models/devlogModel');
-require('./models/projectModel');
-require('./models/accountModel');
+require('./models/noteModel');
 
 // Routers
 
 if (process.env.NODE_ENV === 'dev') swagger(app);
-app.use(`${basePath}/projects`, require('./routes/projectRouter'));
-app.use(`${basePath}/devlogs`, require('./routes/devlogRouter'));
-app.use(`${basePath}/accounts`, require('./routes/accountRouter'));
-app.use(`${basePath}/comments`, require('./routes/commentRouter'));
-app.use(`${basePath}/image`, require('./routes/imageRouter'));
+app.use(`${basePath}/notes`, require('./routes/noteRouter'));
 
 
 // Send a 404 when no other routes are found
