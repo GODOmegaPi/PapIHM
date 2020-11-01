@@ -1,0 +1,26 @@
+module.exports = {
+  future: {
+    // removeDeprecatedGapUtilities: true,
+    // purgeLayersByDefault: true,
+  },
+  purge: [
+    './public/**/*.html',
+    './src/**/*.vue',
+  ],
+  theme: {
+    colors: {
+      white: '#FFF',
+      black: '#000',
+      red: '#c0392b',
+      blue: '#2980b9',
+      orange: '#e67e22',
+      yellow: '#f1c40f',
+      green: '#27ae60',
+      base: '#ecf0f1',
+      darkGray: '#7f8c8d',
+    },
+    extend: {},
+  },
+  variants: {},
+  plugins: [],
+};

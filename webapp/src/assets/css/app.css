@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.note-card{
+    @apply rounded-lg inline-block font-bold p-5;
+}
+
+
+.note-level-1 {
+    @apply bg-red text-white;
+}
+
+.btn-primary{
+    @apply bg-blue rounded-full text-white py-2 px-10;
+}
