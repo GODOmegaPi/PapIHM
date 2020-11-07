@@ -20,16 +20,19 @@
     <section>
       <p class="section-title">A faire aujourd'hui</p>
     </section>
+    <NoteForm/>
   </div>
 </template>
 
 <script>
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import NoteForm from '@/components/NoteForm.vue';
 
 library.add(faPlus);
 export default {
   name: 'HelloWorld',
+  components: { NoteForm },
   data: () => ({
     notes: [],
   }),
