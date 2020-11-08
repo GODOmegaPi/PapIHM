@@ -12,9 +12,9 @@ export default {
 
 <style scoped>
   header{
-    @apply bg-white shadow w-full flex p-5;
+    @apply bg-white shadow w-full flex p-5 h-16;
   }
   .logo{
-    @apply text-2xl;
+    @apply text-xl;
   }
 </style>

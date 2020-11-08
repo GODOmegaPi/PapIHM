@@ -35,11 +35,11 @@
     </fieldset>
     <fieldset v-if="type==='list'">
       <legend>Contenu</legend>
-      <ul class="border bg-white mb-5 p-5">
+      <ul class="border bg-white mb-3 px-5 py-1">
         <li v-if="!list.length"> Pas de contenu </li>
         <li v-for="elem in list" :key="elem">{{ elem }}</li>
       </ul>
-      <input type="text mb-5" v-model="item" placeholder="Nouvel element">
+      <input type="text mb-3" v-model="item" placeholder="Nouvel element">
       <span class="btn-primary rounded-full px-5 ml-5 py-1" @click="addToList(item)">add</span>
     </fieldset>
     <fieldset>
@@ -53,9 +53,9 @@
         <label for="recurrence-week">Chaque semaine</label>
       </div>
     </fieldset>
-    <section class="flex justify-between">
-      <button class="btn-no-go">Annuler</button>
-      <button class="btn-go" type="submit">Sauvgarder</button>
+    <section class="flex justify-between pt-10">
+      <span class="btn btn-no-go" @click="closePanel()">Annuler</span>
+      <span class="btn btn-go" type="submit" @click="addNote()">Sauvgarder</span>
     </section>
   </form>
 </template>
@@ -79,19 +79,35 @@ export default {
       this.list.push(item);
       this.item = '';
     },
+    closePanel() {
+      this.$parent.panelStatus = 'close';
+    },
+    addNote() {
+      const note = {
+        title: this.title,
+        level: this.importance,
+        recurrence: this.recurrence,
+      };
+      if (this.type === 'text') {
+        note.content = this.content;
+      } else if (this.type === 'list') {
+        note.content = this.list;
+      }
+      this.$parent.notes.push(note);
+    },
   },
 };
 </script>
 
 <style scoped>
 form{
-  @apply p-5 w-1/2 flex flex-wrap flex-col;
+  @apply py-5 px-12 flex flex-wrap flex-col w-full;
 }
 fieldset{
-  @apply border-b border-darkGray mb-5 pb-5;
+  @apply border-b border-darkGray mb-3 pb-5;
 }
 legend{
-  @apply w-full mb-5;
+  @apply w-full mb-3;
 }
 textarea, input[type='text']{
   @apply w-full;
@@ -115,6 +131,6 @@ textarea, input[type='text']{
 }
 
 input,textarea{
-  @apply border p-3;
+  @apply border px-3 py-1;
 }
 </style>
