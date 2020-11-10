@@ -52,7 +52,7 @@ export default {
 }
 .note-card{
   flex-basis: 15rem;
-  @apply cursor-pointer flex flex-col flex-wrap justify-center items-center;
+  @apply cursor-pointer flex flex-col flex-wrap justify-center items-center break-words;
 }
 .note-card-title{
   @apply mb-5 text-center text-xl w-full;

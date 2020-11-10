@@ -130,7 +130,7 @@ section{
   @apply mb-5 flex flex-wrap;
 }
 .section-title{
-  @apply font-bold px-3 pb-2 mb-5 text-darkGray border-b border-darkGray w-full;
+  @apply font-bold px-3 pb-2 mb-5 text-darkGray border-b border-darkGray w-full text-2xl;
 }
 .note-card{
   @apply mb-10 mr-10;
