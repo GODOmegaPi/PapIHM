@@ -19,6 +19,7 @@ module.exports = {
       base: '#ecf0f1',
       lightGray: '#f9f9f9',
       darkGray: '#7f8c8d',
+      icon: '#34495e',
     },
     extend: {},
   },

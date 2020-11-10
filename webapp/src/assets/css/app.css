@@ -20,7 +20,7 @@
 }
 
 .note-level-3 {
-    @apply bg-yellow text-white;
+    @apply bg-yellow text-black;
 }
 
 .note-level-4 {
