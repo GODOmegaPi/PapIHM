@@ -155,7 +155,7 @@ export default {
 
 <style scoped>
 form{
-  @apply py-5 px-12 flex flex-wrap flex-col w-full;
+  @apply py-5 px-12 flex flex-wrap flex-col w-full overflow-scroll;
 }
 fieldset{
   @apply border-b border-darkGray mb-3 pb-5;
