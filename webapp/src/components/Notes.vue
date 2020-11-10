@@ -1,5 +1,6 @@
 <template>
   <div>
+    <slider class="mb-12"/>
     <div class="mb-5 flex justify-between">
       <span class="btn btn-primary self-end" @click="openPanel()">
         <fa-icon class="" icon="plus"  />
@@ -36,11 +37,12 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { faPlus, faTimes } from '@fortawesome/free-solid-svg-icons';
 import NoteForm from '@/components/NoteForm.vue';
 import Note from '@/components/Note.vue';
+import Slider from '@/components/slider.vue';
 
 library.add(faPlus, faTimes);
 export default {
   name: 'HelloWorld',
-  components: { Note, NoteForm },
+  components: { Slider, Note, NoteForm },
   data: () => ({
     notes: [],
     panelStatus: 'close',
