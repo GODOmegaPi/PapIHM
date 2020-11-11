@@ -10,7 +10,7 @@ npm install
 npm run serve
 ```
 
-If you have an issue with the `npm run serve` step, use the following commands to start the project (in the forlder `PapIHM/webapp`)
+If you have an issue with the `npm run serve` step, use the following commands to start the project (in the folder `PapIHM/webapp`)
 ```
 npm i -g eslint
 eslint --fix .
